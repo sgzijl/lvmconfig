@@ -1,0 +1,34 @@
+---
+vg_layout:
+  "vg01":
+    pvs: '/dev/sdb'
+  "vg02":
+    pvs:
+      - '/dev/sdc'
+      - '/dev/sdd'
+
+lv_layout:
+  "backup":
+    vg: "vg01"
+    fs: "ext4"
+    mnt_point: "/backup"
+    mnt_opts: "defaults"
+    size: "100M"
+  "software":
+    vg: "vg01"
+    fs: "ext4"
+    mnt_point: "/software"
+    mnt_opts: "defaults"
+    size: "200M"
+  "data":
+    vg: "vg01"
+    fs: "ext3"
+    mnt_point: "/data"
+    mnt_opts: "defaults"
+    size: "300M"
+  "logging":
+    vg: "vg01"
+    fs: "ext3"
+    mnt_point: "/logging"
+    mnt_opts: "defaults,noexec,nodev,nosuid"
+    size: "400M"

@@ -1,0 +1,43 @@
+{
+  "vg_layout": {
+    "vg01": {
+      "pvs": "/dev/sdb"
+    },
+    "vg02": {
+      "pvs": [
+        "/dev/sdc",
+        "/dev/sdd"
+      ]
+    }
+  },
+  "lv_layout": {
+    "logging": {
+      "size": "400M",
+      "vg": "vg01",
+      "fs": "ext3",
+      "mnt_opts": "defaults,noexec,nodev,nosuid",
+      "mnt_point": "/logging"
+    },
+    "backup": {
+      "size": "100M",
+      "vg": "vg01",
+      "fs": "ext4",
+      "mnt_opts": "defaults",
+      "mnt_point": "/backup"
+    },
+    "data": {
+      "size": "300M",
+      "vg": "vg01",
+      "fs": "ext3",
+      "mnt_opts": "defaults",
+      "mnt_point": "/data"
+    },
+    "software": {
+      "size": "200M",
+      "vg": "vg01",
+      "fs": "ext4",
+      "mnt_opts": "defaults",
+      "mnt_point": "/software"
+    }
+  }
+}
