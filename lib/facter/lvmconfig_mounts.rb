@@ -19,7 +19,7 @@ end
 mounts.each do |mount|
   # POXIX readable format: avoid linebreaks
   output = %x{df -P -m #{mount}}
-  output.each do |str|
+  output.each_line do |str|
     dsk_size = nil
     dsk_used = nil
     dsk_avail = nil
