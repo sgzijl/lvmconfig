@@ -22,6 +22,7 @@ NB: define LV sizes in Megabytes.
 
 ## Supported Platforms ##
 
-Tested on Red Hat EL5 & EL6 with filesystems ext2, ext3, ext4 & xfs.
+Tested on Red Hat EL5/EL6/EL7'ish with filesystems ext2, ext3, ext4 & xfs.
 
-NB: online resizing works for ext3 and ext4 (see: puppetlabs-lvm)
+Offline resizing works for ext[34]. Online resizing works on ext[34] and xfs (xfs_growfs only works on mounted filesystems).
+
