@@ -1,5 +1,5 @@
 name    'sz-lvmconfig'
-version '0.0.2'
+version '0.0.3'
 source 'https://github.com/sgzijl/sz-lvmconfig'
 author 'Siert Zijl <sgzijl@gmail.com>'
 license 'Apache 2.0'
@@ -12,5 +12,5 @@ description "Get LVM configuration details from hiera and use
 project_page 'https://github.com/sgzijl/sz-lvmconfig'
 
 ## Add dependencies, if any:
-dependency 'puppetlabs/lvm', '>= 0.1.1'
-dependency 'puppetlabs/stdlib', '>= 2.2.1'
+dependency 'puppetlabs/lvm', '>= 0.3.3'
+dependency 'puppetlabs/stdlib', '>= 4.3.2'
