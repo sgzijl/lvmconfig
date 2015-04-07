@@ -1,0 +1,20 @@
+{
+  "name": "sz-lvmconfig",
+  "version": "0.0.4",
+  "author": "Siert Zijl <sgzijl@gmail.com>",
+  "summary": "Configure LVM with data from Hiera",
+  "license": "Apache 2.0",
+  "source": "https://github.com/sgzijl/lvmconfig",
+  "issues_url": null,
+  "project_page": "https://github.com/sgzijl/lvmconfig",
+  "operatingsystem_support": [
+    {
+      "operatingsystem":"RedHat",
+      "operatingsystemrelease":[ "5.0", "6.0", "7.0" ]
+    },
+  ]
+  "dependencies": [
+    {"name":"puppetlabs-lvm","version_requirement":">= 0.3.3"},
+    {"name":"puppetlabs-stdlib", "version_requirement":">= 4.3.2"},
+  ]
+}
