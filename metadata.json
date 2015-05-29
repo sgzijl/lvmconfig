@@ -3,9 +3,9 @@
   "version": "0.0.4",
   "author": "Siert Zijl <sgzijl@gmail.com>",
   "summary": "Configure LVM with data from Hiera",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "source": "https://github.com/sgzijl/lvmconfig",
-  "issues_url": null,
+  "issues_url": "https://github.com/sgzijl/lvmconfig/issues",
   "project_page": "https://github.com/sgzijl/lvmconfig",
   "operatingsystem_support": [
     {
