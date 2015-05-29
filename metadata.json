@@ -11,8 +11,8 @@
     {
       "operatingsystem":"RedHat",
       "operatingsystemrelease":[ "5.0", "6.0", "7.0" ]
-    },
-  ]
+    }
+  ],
   "dependencies": [
     {"name":"puppetlabs-lvm","version_requirement":">= 0.3.3"},
     {"name":"puppetlabs-stdlib", "version_requirement":">= 4.3.2"}
