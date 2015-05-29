@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    "stdlib": "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+    "lvm": "git://github.com/puppetlabs/puppetlabs-lvm.git"
+  symlinks:
+    "lvmconfig": "#{source_dir}" 
