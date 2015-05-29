@@ -9,8 +9,8 @@ define lvmconfig::vgconfig ( $pvs ) {
   }
 
   volume_group { $vg :
-    ensure            => present,
-    physical_volumes  => $pvs,
+    ensure           => present,
+    physical_volumes => $pvs,
   }
 
 }
