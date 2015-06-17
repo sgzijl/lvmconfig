@@ -5,7 +5,7 @@ define lvmconfig::lvconfig ( $vg, $fs, $mnt_point, $size, $mnt_opts ) {
   $lv = $name
 
   # Make sure the size argument is valid for lvcreate
-  if $size =~ /^\d+[bBsSkKmMgGtTpPeE]?$/ {
+  if $size =~ /^[0-9]+(\.[0-9]+)?[KMGTPE]/i {
     logical_volume { $lv :
       ensure       => present,
       volume_group => $vg,
