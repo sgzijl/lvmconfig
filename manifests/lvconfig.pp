@@ -4,8 +4,8 @@ define lvmconfig::lvconfig ( $vg, $fs, $mnt_point, $size, $mnt_opts ) {
   # Readability
   $lv = $name
 
-  # Do nothing if size is not defined in Megabytes
-  if $size =~ /^\d+M$/ {
+  # Make sure the size argument is valid for lvcreate
+  if $size =~ /^\d+[bBsSkKmMgGtTpPeE]?$/ {
     logical_volume { $lv :
       ensure       => present,
       volume_group => $vg,
@@ -38,7 +38,7 @@ define lvmconfig::lvconfig ( $vg, $fs, $mnt_point, $size, $mnt_opts ) {
       creates => $mnt_point,
     }
   } else {
-    fail("Define size in megabytes, eg: 1024M (LV ${lv} has ${size})")
+    fail("Define size in megabytes, eg: 1024 or specify a valid suffix [BSKMGTPE] - (LV ${lv} has ${size})")
   }
 
 }
