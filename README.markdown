@@ -18,8 +18,6 @@ Depends on:
 
 See example directory
 
-NB: define LV sizes in Megabytes.
-
 ## Supported Platforms ##
 
 Tested on Red Hat EL5/EL6/EL7'ish with filesystems ext2, ext3, ext4 & xfs.
