@@ -4,7 +4,7 @@ define lvmconfig::lvconfig ( $vg, $fs, $mnt_point, $size, $mnt_opts ) {
   # Readability
   $lv = $name
 
-  # Make sure the size argument is valid for lvcreate
+  # Make sure the size argument is valid for the logical_volume type
   if $size =~ /^[0-9]+(\.[0-9]+)?[KMGTPE]/i {
     logical_volume { $lv :
       ensure       => present,
@@ -38,7 +38,7 @@ define lvmconfig::lvconfig ( $vg, $fs, $mnt_point, $size, $mnt_opts ) {
       creates => $mnt_point,
     }
   } else {
-    fail("Define size in megabytes, eg: 1024 or specify a valid suffix [BSKMGTPE] - (LV ${lv} has ${size})")
+    fail("Define size with a valid suffix [KMGTPE] - (LV ${lv} has ${size})")
   }
 
 }
