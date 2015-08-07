@@ -2,10 +2,15 @@
 #
 # Provide information about mount/partition usage
 mounts = [ ]
-mntpoints=`mount -t ext2,ext3,ext4,reiserfs,xfs`
-mntpoints.split(/\n/).each do |m|
-  mount = m.split(/ /)[2]
-  mounts << mount
+begin
+  mntpoints=`mount -t ext2,ext3,ext4,reiserfs,xfs`
+  mntpoints.split(/\n/).each do |m|
+    mount = m.split(/ /)[2]
+    mounts << mount
+  end
+rescue
+  # System we're running on doesn't have the mount command (i.e. Windows)
+  # Nothing to do, mounts[] is already empty
 end
 
 Facter.add("mounts") do
